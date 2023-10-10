@@ -1,0 +1,29 @@
+Kharapsy/
+│
+├── bin/
+│   ├── list_messages.py
+│   └── update_messages.py
+│
+├── config/
+│   └── messages_config.json
+│
+├── doc/
+│   ├── flowchart.txt
+│   └── pseudo.txt
+│   └── dir.txt
+
+├── src/
+│   ├── app.py
+│   ├── database_handler.py
+│   ├── goodbye_module.py
+│   ├── knowledge_base.py
+│   ├── media_controller.py
+│   ├── save_messages.py
+│   ├── scheduler.py
+│   └── voice_recognition.py
+│
+├── Dockerfile
+├── makefile
+├── README.md
+└── requirements.txt
+
