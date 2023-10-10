@@ -1,14 +1,18 @@
+import json
+import os
 import random
 import time
 
-# Centralized list of all possible messages.
-BASE_GOODBYE_MESSAGES = [
-    "Have a nice day!",
-    "May the knowledge be with you!",
-    "Wish you the best!",
-    "Have a wonderful day!"
-    # You can add more messages to this list in the future.
-]
+# Get the directory of the current script
+current_directory = os.path.dirname(os.path.abspath(__file__))
+
+# Construct the path to the messages_config.json relative to the script's directory
+config_path = os.path.join(current_directory, '../bin/messages_config.json')
+
+# Load messages from configuration file
+with open(config_path, 'r') as file:
+    config_data = json.load(file)
+    BASE_GOODBYE_MESSAGES = config_data['BASE_GOODBYE_MESSAGES']
 
 def initialize_goodbye_messages():
     """Prepends 'Goodbye!' to each message and returns the shuffled list."""
