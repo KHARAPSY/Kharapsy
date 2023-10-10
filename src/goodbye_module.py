@@ -7,7 +7,7 @@ import time
 current_directory = os.path.dirname(os.path.abspath(__file__))
 
 # Construct the path to the messages_config.json relative to the script's directory
-config_path = os.path.join(current_directory, '../bin/messages_config.json')
+config_path = os.path.join(current_directory, '../config/messages_config.json')
 
 # Load messages from configuration file
 with open(config_path, 'r') as file:

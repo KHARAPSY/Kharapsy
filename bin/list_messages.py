@@ -1,7 +1,7 @@
 import json
 import os
 
-config_path = '../config/messages_config.json'
+config_path = 'config/messages_config.json'
 
 def list_messages():
     with open(config_path, 'r') as file:
