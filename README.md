@@ -24,10 +24,37 @@ cd Kharapsy
 
 ### Build & Run the application
 
-```bash
-make all
-```
 This will build a Docker image and run a container using that image.
+
+```bash
+make
+```
+
+#### CRUD the Exit messages
+
+This will show the list of exit messages
+
+```bash
+make list
+```
+
+This will add new exit message
+
+```bash
+make add-message message="Your new message here."
+```
+
+This will remove exit message
+
+```bash
+make remove-message message="Message to be removed."
+```
+
+This will update exit message
+
+```bash
+make update-message old_message="Old message." new_message="New message."
+```
 
 ## Features
 - Knowledge Base: (Provide a brief description of this feature)
