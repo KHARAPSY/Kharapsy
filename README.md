@@ -1,4 +1,6 @@
-# Kharapsy
+# Kharapsy AI
+
+Kharapsy AI is an interactive CLI application that provides various functionalities like Knowledge Base, Media Controller, Scheduler, and Voice Recognition. Dive in and explore the capabilities!
 
 An ongoing project to develop a personal AI assistant, showcasing various functionalities from web scraping to natural language processing.
 
@@ -10,8 +12,7 @@ This project is built step-by-step, with regular updates. Its purpose is to demo
 
 ### Prerequisites
 
-- Docker
-- Git
+- Ensure you have https://www.docker.com/ installed.
 
 ### Clone the Repository
 
@@ -21,44 +22,29 @@ cd Kharapsy
 
 ```
 
-### Building the Docker Image
-
-Navigate to the project directory and build the Docker image:
+### Build & Run the application
 
 ```bash
-docker build -t kharapsy .
-
+make all
 ```
+This will build a Docker image and run a container using that image.
 
-### Running the AI Assistant
+## Features
+- Knowledge Base: (Provide a brief description of this feature)
+- Media Controller: (Provide a brief description of this feature)
+- Scheduler: (Provide a brief description of this feature)
+- Voice Recognition: (Provide a brief description of this feature)
 
-After building the Docker image, run the application with:
+## Modules
+Here's a brief overview of the modules in the 'src' directory:
 
-```bash
-docker run kharapsy
+- app.py: The main entry point of the application.
+- knowledge_base.py: (Briefly describe this module)
+- media_controller.py: (Briefly describe this module)
+- scheduler.py: (Briefly describe this module)
+- voice_recognition.py: (Briefly describe this module)
+- goodbye_module.py: Responsible for displaying randomized goodbye messages.
 
-```
+## Acknowledgments
+Thanks to all.
 
-### Project Structure
-
-    src/: Contains the primary source code of the AI assistant.
-    requirements.txt: Enumerates the Python packages necessary for the application.
-    Dockerfile: Holds instructions for Docker to package the application inside a container.
-
-### Future Enhancements
-
-This project is continuously evolving. Plans for future enhancements include:
-
-    Web scraping for gathering data.
-    Natural language processing for understanding user inputs and generating user-friendly responses.
-    Integration with external APIs to provide extended functionalities.
-
-
-### Contributing
-
-Though Kharapsy is primarily a personal endeavor, feedback and suggestions are always appreciated. Feel free to open an issue or submit a pull request.
-
-
-### License
-
-MIT License
