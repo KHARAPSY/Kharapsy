@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  # Define the application service
+  app:
+    image: kharapsy
+    container_name: kharapsy-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - mysql  # This ensures the app service waits for mysql service to start
+    networks:
+      - kharapsy-network  # Define a custom network
+
+  # Define the MySQL service
+  mysql:
+    image: mysql:latest
+    container_name: mysql-container-new
+    environment:
+      MYSQL_ROOT_PASSWORD: bp
+      MYSQL_DATABASE: kharapsy_ai_db
+      MYSQL_USER: mage
+      MYSQL_PASSWORD: Secret-PWD^112
+    volumes:
+      - ~/PlayGround/Kharapsy:/var/lib/mysql
+    ports:
+      - "3306:3306"  # Optionally expose MySQL port
+    networks:
+      - kharapsy-network  # Use the same custom network
+
+# Define the custom network
+networks:
+  kharapsy-network:
+    driver: bridge
+
