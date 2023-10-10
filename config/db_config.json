@@ -1,0 +1,7 @@
+{
+    "host": "mysql",
+    "user": "mage",
+    "password": "Secret-PWD^112",
+    "database": "kharapsy_ai_db"
+}
+
