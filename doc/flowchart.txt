@@ -1,0 +1,22 @@
+To create a flowchart based on the pseudo code, we'd need to graphically represent each step and decision point. Here's a textual representation:
+
+1. Start
+2. Display the main greeting.
+3. Display the menu to the user.
+4. Get user input.
+5. Decision: Is the input 1, 2, 3, 4, or 0?
+	If 1: Execute Knowledge Base.
+	If 2: Execute Media Controller.
+	If 3: Execute Scheduler.
+	If 4: Execute Voice Recognition.
+	If 0: Call print_goodbye_message and end.
+	Else: Display "Invalid choice" message.
+6. Loop back to displaying the menu (step 3) unless the choice was 0.
+
+For the print_goodbye_message:
+
+1. Check if goodbye_messages is empty.
+	If yes: Re-initialize it.
+2. Select and remove the last message.
+3. Display the message with a timed delay.
+

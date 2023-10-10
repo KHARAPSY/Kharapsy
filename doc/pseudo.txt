@@ -1,0 +1,50 @@
+BEGIN
+
+FUNCTION main:
+    PRINT "Hello, World! Welcome to Kharapsy AI..."
+    
+    LOOP FOREVER:
+        DISPLAY menu with the following options:
+            0: Exit
+            1: Knowledge Base
+            2: Media Controller
+            3: Scheduler
+            4: Voice Recognition
+
+        INPUT choice from user
+
+        IF choice is 1 THEN
+            CALL start_knowledge_base function from knowledge_base module
+        ELSE IF choice is 2 THEN
+            CALL start_media_controller function from media_controller module
+        ELSE IF choice is 3 THEN
+            CALL start_scheduler function from scheduler module
+        ELSE IF choice is 4 THEN
+            CALL start_voice_recognition function from voice_recognition module
+        ELSE IF choice is 0 THEN
+            CALL print_goodbye_message function from goodbye_module
+            BREAK out of the loop
+        ELSE
+            PRINT "Invalid choice. Please select a number between 0 and 4."
+
+END FUNCTION main
+
+WHEN PROGRAM starts:
+    CALL main
+
+FUNCTION initialize_goodbye_messages:
+    LOAD BASE_GOODBYE_MESSAGES from messages_config.json
+    APPEND "Goodbye! " to the start of each message
+    SHUFFLE the messages list
+    RETURN shuffled messages list
+
+FUNCTION print_goodbye_message:
+    IF goodbye_messages is empty THEN
+        RE-INITIALIZE goodbye_messages using initialize_goodbye_messages function
+    END IF
+
+    SELECT and REMOVE the last message from goodbye_messages
+    PRINT the message with a timed delay
+
+END
+
