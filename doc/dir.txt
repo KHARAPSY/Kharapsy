@@ -6,23 +6,23 @@ Kharapsy/
 │
 ├── config/
 │   └── messages_config.json
+│   └── db_config.json
 │
 ├── doc/
 │   ├── flowchart.txt
-│   └── pseudo.txt
+│   ├── pseudo.txt
 │   └── dir.txt
-
+│
 ├── src/
 │   ├── app.py
-│   ├── database_handler.py
+│   ├── contact_scraper.py
 │   ├── goodbye_module.py
 │   ├── knowledge_base.py
 │   ├── media_controller.py
-│   ├── save_messages.py
-│   ├── scheduler.py
 │   └── voice_recognition.py
 │
 ├── Dockerfile
+├── docker-compose.yml 
 ├── makefile
 ├── README.md
 └── requirements.txt

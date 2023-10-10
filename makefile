@@ -1,18 +1,40 @@
 # Name of the Docker image
 IMAGE_NAME=kharapsy
+COMPOSE_FILE=docker-compose.yml
 
 # Default target to run when calling `make` with no arguments
-all: build run
+all: build docker-run
+clean: 
+	$(docker-stop) docker-compose down
 
-# Target to build the Docker image
-build:
+docker-build:
 	@echo "Building Docker image..."
 	docker build -t $(IMAGE_NAME) .
 
-# Target to run the Docker container
-run:
+docker-run: up
 	@echo "Running Docker container..."
 	docker run -it $(IMAGE_NAME)
+
+docker-stop:
+	@echo "Stoping Docker container..."
+	docker stop another-mysql-container
+
+build:
+	@echo "Building Docker services..."
+	docker-compose -f $(COMPOSE_FILE) build
+
+up: docker-build
+	@echo "Starting Docker services..."
+	docker-compose -f $(COMPOSE_FILE) up -d
+
+down:
+	@echo "Stopping Docker services..."
+	docker-compose -f $(COMPOSE_FILE) down
+
+logs:
+	@echo "Displaying logs..."
+	docker-compose -f $(COMPOSE_FILE) logs
+
 
 # Target to list the Exit messages
 list:
@@ -34,5 +56,5 @@ update-message:
 
 
 # Phony target to ensure the commands always run, even if there's a file named "build" or "run"
-.PHONY: all build run
+.PHONY: all build up down logs list add-message remove-message update-message
 
