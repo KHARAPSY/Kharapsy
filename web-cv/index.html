@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Treesupan Suwannawong | AI Infrastructure & Security Developer</title>
+  <meta name="description" content="Software Developer with 4 years of experience building RAG systems, AI data pipelines, and Zero Trust infrastructure.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+</head>
+<body>
+  <div class="bg-glow glow-a" aria-hidden="true"></div>
+  <div class="bg-glow glow-b" aria-hidden="true"></div>
+
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">Treesupan Suwannawong</p>
+      <h1>AI Infrastructure, RAG Systems, Security Engineering</h1>
+      <p class="lead">Software Developer and Computer Engineering Master's candidate with 4 years of experience delivering high-performance RAG pipelines and secure infrastructure.</p>
+      <div class="actions">
+        <a class="btn primary" href="CV.pdf">Download CV</a>
+        <a class="btn" href="https://linkedin.com/in/treesupan-suwannawong" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="https://github.com/suwalutions/PurrfectKit" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container app-shell">
+    <nav class="tabbar" aria-label="Resume sections">
+      <button class="tab-btn active" data-section="overview.html" hx-get="partials/overview.html" hx-target="#content" hx-swap="innerHTML" hx-indicator="#loader">Overview</button>
+      <button class="tab-btn" data-section="experience.html" hx-get="partials/experience.html" hx-target="#content" hx-swap="innerHTML" hx-indicator="#loader">Experience</button>
+      <button class="tab-btn" data-section="projects.html" hx-get="partials/projects.html" hx-target="#content" hx-swap="innerHTML" hx-indicator="#loader">Projects</button>
+      <button class="tab-btn" data-section="stack.html" hx-get="partials/stack.html" hx-target="#content" hx-swap="innerHTML" hx-indicator="#loader">Tech Stack</button>
+      <button class="tab-btn" data-section="education.html" hx-get="partials/education.html" hx-target="#content" hx-swap="innerHTML" hx-indicator="#loader">Education</button>
+    </nav>
+
+    <section id="content" class="panel" hx-get="partials/overview.html" hx-trigger="load" hx-swap="innerHTML" hx-indicator="#loader"></section>
+    <div id="loader" class="loader htmx-indicator">Loading section...</div>
+
+    <noscript>
+      <section class="panel">
+        <h2>Enable JavaScript</h2>
+        <p>This HTMX resume requires JavaScript to load sections.</p>
+      </section>
+    </noscript>
+  </main>
+
+  <footer class="container footer">
+    <p>© <span id="year"></span> Treesupan Suwannawong</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.body.addEventListener("htmx:afterSwap", function (event) {
+      if (event.detail.target.id !== "content") return;
+      var path = event.detail.requestConfig.path.split("/").pop();
+      document.querySelectorAll(".tab-btn").forEach(function (btn) {
+        btn.classList.toggle("active", btn.dataset.section === path);
+      });
+    });
+  </script>
+</body>
+</html>
