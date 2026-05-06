@@ -1,0 +1,261 @@
+:root {
+  --bg: #060914;
+  --panel: rgba(13, 19, 40, 0.78);
+  --text: #eaf0ff;
+  --muted: #b2bedf;
+  --line: rgba(124, 145, 235, 0.32);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(123, 140, 255, 0.16), transparent 58%),
+    radial-gradient(1200px 700px at 90% 0%, rgba(57, 210, 255, 0.12), transparent 62%),
+    linear-gradient(180deg, #070b18 0%, var(--bg) 45%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.bg-glow {
+  position: fixed;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.glow-a {
+  background: rgba(123, 140, 255, 0.3);
+  top: -90px;
+  left: -120px;
+}
+
+.glow-b {
+  background: rgba(57, 210, 255, 0.2);
+  bottom: -100px;
+  right: -120px;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 3.8rem 0 2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.eyebrow {
+  margin: 0;
+  color: #c7d2ff;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+}
+
+h1 {
+  margin: 0.5rem 0 1rem;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.07;
+  max-width: 17ch;
+}
+
+.lead {
+  margin: 0;
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.64rem 1rem;
+  border: 1px solid var(--line);
+  color: var(--text);
+  text-decoration: none;
+  border-radius: 0.6rem;
+  background: rgba(12, 18, 37, 0.66);
+}
+
+.btn.primary {
+  background: linear-gradient(120deg, #4a62ff, #2aa8ff);
+  border-color: rgba(145, 187, 255, 0.85);
+}
+
+.app-shell {
+  padding: 2rem 0 1rem;
+}
+
+.tabbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.tab-btn {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(12, 18, 37, 0.66);
+  color: var(--text);
+  padding: 0.48rem 0.9rem;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: linear-gradient(120deg, #4a62ff, #2aa8ff);
+  border-color: rgba(145, 187, 255, 0.85);
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 0.95rem;
+  padding: 1.1rem;
+  box-shadow: 0 15px 36px rgba(2, 6, 20, 0.28);
+}
+
+.panel h2 {
+  margin: 0 0 0.9rem;
+  font-size: 1.2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.card {
+  background: rgba(8, 14, 31, 0.68);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  padding: 0.9rem;
+}
+
+.card h3 {
+  margin: 0 0 0.25rem;
+}
+
+.metric {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.timeline {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.role-meta {
+  color: #9bb2ff;
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+.card ul {
+  margin: 0.45rem 0 0;
+  padding-left: 1rem;
+}
+
+.card li {
+  color: var(--muted);
+  margin-bottom: 0.25rem;
+}
+
+.card a {
+  color: #b5cbff;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.chips span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.3rem 0.62rem;
+  background: rgba(128, 168, 255, 0.1);
+  color: #d5e2ff;
+  font-size: 0.9rem;
+}
+
+.flow {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.flow-step .step-no {
+  display: inline-flex;
+  width: 1.45rem;
+  height: 1.45rem;
+  border-radius: 999px;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  border: 1px solid rgba(145, 187, 255, 0.8);
+  background: linear-gradient(130deg, #4d67ff, #2ba9ff);
+}
+
+.loader {
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.htmx-indicator {
+  display: none;
+}
+
+.htmx-request.htmx-indicator,
+.htmx-request .htmx-indicator {
+  display: block;
+}
+
+.footer {
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  padding: 1rem 0 2rem;
+}
+
+@media (max-width: 920px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .flow {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .flow {
+    grid-template-columns: 1fr;
+  }
+}
