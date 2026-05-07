@@ -1,14 +1,14 @@
-- 👋 Hi, I am Kharapsy and I have dreams.
-- 👀 I’m interested in everything that happened in this universe.
-- 🌱 I’m currently learning how to be a good human.
+- 👋 Hi, I’m **Kharapsy**.
+- 🧠 I’m passionate about **AI infrastructure, automation, and secure systems**.
+- 🌱 I’m continuously learning and building in public.
 
-> KHARAPSY/Kharapsy is a special repository: its README.md will appear on your profile!
+> **KHARAPSY/Kharapsy is a special repository: its README.md will appear on your profile!**
 
 ## Legacy Vision (Backlog / In Progress)
 
-This repository also contains my original assistant project idea from ~3 years ago (the Python app under `src/`, `config/`, and `bin/`).
+This repository contains my original assistant project idea from ~3 years ago (the Python app under `src/`, `config/`, and `bin/`).
 
-I am intentionally keeping it alive as a long-term backlog project and will complete it incrementally.
+I’m intentionally keeping it alive as a long-term backlog project and completing it incrementally.
 
 ### Roadmap
 
