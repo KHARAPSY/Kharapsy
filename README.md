@@ -2,13 +2,19 @@
 - 👀 I’m interested in everything that happened in this universe.
 - 🌱 I’m currently learning how to be a good human.
 
-## Web CV
+> KHARAPSY/Kharapsy is a special repository: its README.md will appear on your profile!
 
-This repository now includes a production-ready web CV in `web-cv/`.
+## Legacy Vision (Backlog / In Progress)
 
-- Source: `web-cv/`
-- Deployment: GitHub Pages via GitHub Actions
-- URL after Pages is enabled: `https://kharapsy.github.io/Kharapsy/`
+This repository also contains my original assistant project idea from ~3 years ago (the Python app under `src/`, `config/`, and `bin/`).
+
+I am intentionally keeping it alive as a long-term backlog project and will complete it incrementally.
+
+### Roadmap
+
+- **Now:** Keep the project documented and stable as a skills showcase.
+- **Next:** Implement one module at a time (starting with `scheduler`).
+- **Later:** Evolve it into a fully integrated assistant project.
 
 
 <!---
