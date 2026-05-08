@@ -2,7 +2,7 @@
 - 🧠 I’m passionate about **AI infrastructure, automation, and secure systems**.
 - 🌱 I’m continuously learning and building in public.
 
-> **KHARAPSY/Kharapsy is a special repository: its README.md will appear on your profile!**
+> **Want to know more about me? Check out my Portfolio https://kharapsy.github.io/CV/ **
 
 ## Legacy Vision (Backlog / In Progress)
 
